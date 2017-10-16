@@ -1,0 +1,18 @@
+{
+    "name": "waryway/phptraits",
+    "description": "General use traits",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kyle Wiering",
+            "email": "kyle@waryway.com"
+        }
+    ],
+	"autoload": {
+		"psr-4": {
+			"waryway\\phptraits\\": "src/"
+		}
+	},
+    "minimum-stability": "dev"
+}
