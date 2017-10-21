@@ -1,8 +1,12 @@
 <?php
 namespace Waryway\PhpTraits;
 
+use stdClass;
+
 trait Hydrator
 {
+    protected $strict = false;
+
     public function __get($name) {
         if (property_exists($this,$name)) {
             return $this->$name;    
@@ -10,10 +14,10 @@ trait Hydrator
     }
     
     public function __set($name, $value) {
-        if (property_exists($this,$name)) {
-            $this->$name = $value;
-        } else {
+        if ($this->strict && !property_exists($this,$name)) {
             $this->notExists($name);
+        } else {
+            $this->$name = $value;
         }
     }
     
@@ -21,7 +25,7 @@ trait Hydrator
         if (property_exists($this,$name)) {
             return isset($this->$name);
         } else {
-            $this->notExists($name);
+            return false;
         }
     }
     
@@ -40,14 +44,13 @@ trait Hydrator
      * @param $strict bool - what to do if the data provided isn't an option in the class being hydrated.
      */
     public function hydrate(stdClass $input, $strict = false) {
+        $this->strict = $strict;
         $failedStrict = [];
         foreach($input as $name => $value) {
-            if (property_exists($this,$name)) {
-                $this->$name = $value;
+            if ($this->strict && !property_exists($this,$name)){
+                $failedStrict[$name] = $value;
             } else {
-                if ($strict){
-                    $failedStrict[$name] = $value;
-                }
+                $this->$name = $value;
             }
         }
         
