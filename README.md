@@ -1,4 +1,4 @@
-# php-traits
+# php-traits-librarys
 General PHP traits for ease of development
 
 ## Usage

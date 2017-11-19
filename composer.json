@@ -1,5 +1,5 @@
 {
-    "name": "waryway/phptraits",
+    "name": "waryway/php-traits-library",
     "description": "General use traits",
     "type": "library",
     "license": "MIT",
@@ -11,7 +11,7 @@
     ],
 	"autoload": {
 		"psr-4": {
-			"Waryway\\PhpTraits\\": "src/"
+			"Waryway\\PhpTraitsLibrary\\": "src/"
 		}
 	},
     "minimum-stability": "dev",

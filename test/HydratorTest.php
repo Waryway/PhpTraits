@@ -2,7 +2,7 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use PHPUnit\Framework\TestCase;
-use Waryway\PhpTraits\Hydrator;
+use Waryway\PhpTraitsLibrary\Hydrator;
 
 
 /**

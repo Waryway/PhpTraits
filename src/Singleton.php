@@ -1,5 +1,5 @@
 <?php
-namespace Waryway\PhpTraits;
+namespace Waryway\PhpTraitsLibrary;
  
 trait Singleton
 {
