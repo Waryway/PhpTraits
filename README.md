@@ -1,6 +1,9 @@
 # php-traits-library
 General PHP traits for ease of development
 
+## Status
+[![Build Status](https://travis-ci.org/Waryway/PhpTraitsLibrary.svg?branch=master)](https://travis-ci.org/Waryway/PhpTraitsLibrary)
+
 ## Usage
 1. Include this package through composer. 
 2. Use the composer autoloader
