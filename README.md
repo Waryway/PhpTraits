@@ -14,3 +14,6 @@ Prevent instantiation of 'single instance' object. The standard php singleton tr
 
 ## Hydrator
 Rest likes standard class objects. Hydrating php object can be easy. Follow the hydrator pattern.
+
+## Generator
+The generator trait currently supports reading from a file with an optional line parser
