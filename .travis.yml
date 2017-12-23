@@ -1,4 +1,5 @@
 language: php
 php:
   - 7.1
+script: composer update
 script: vendor/bin/phpunit --configuration test/phpunit.xml --teamcity
