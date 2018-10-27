@@ -64,7 +64,7 @@ trait Hydrator
     }
     
     private function notExists($name) {
-        trigger_error( 'Property is no declared: ' . $name, E_USER_ERROR );
+        trigger_error( 'Property is not declared: ' . $name, E_USER_ERROR );
     }
 }
 ?>
